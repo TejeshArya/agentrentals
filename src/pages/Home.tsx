@@ -96,12 +96,12 @@ export function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            <div className="text-left">
+            <div className="text-center lg:text-left">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center px-4 py-1.5 bg-[#f5efe6] text-[#a67c4a] rounded-md text-sm font-semibold mb-6"
+                className="inline-flex items-center mx-auto lg:mx-0 px-4 py-1.5 bg-[#f5efe6] text-[#a67c4a] rounded-md text-sm font-semibold mb-6"
               >
                 <Award className="w-4 h-4 mr-2" />
                 Premium Rental Platform
@@ -111,9 +111,9 @@ export function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-5xl sm:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight text-slate-800"
+                className="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-4 lg:mb-6 leading-[1.2] lg:leading-[1.1] tracking-tight text-slate-800"
               >
-                Your Travel Journey, <br/>
+                Your Travel Journey, <br className="hidden sm:block" />
                 <span className="text-slate-800">Simplified.</span>
               </motion.h1>
               
@@ -121,7 +121,7 @@ export function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-2xl font-bold mb-6 text-[#b88c56]"
+                className="text-xl sm:text-2xl font-bold mb-4 lg:mb-6 text-[#b88c56]"
               >
                 Comfort. Security. Prestige.
               </motion.div>
@@ -130,7 +130,7 @@ export function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg text-slate-500 max-w-lg mb-10 font-medium leading-relaxed"
+                className="text-base sm:text-lg text-slate-500 max-w-lg mx-auto lg:mx-0 mb-8 lg:mb-10 font-medium leading-relaxed"
               >
                 Experience premium vehicle rentals tailored to your travel goals. Secure, transparent, and high-quality opportunities all in one place.
               </motion.p>
@@ -139,7 +139,7 @@ export function Home() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
               >
                 <Link 
                   to="/search" 
@@ -185,7 +185,7 @@ export function Home() {
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Browse by Category</h2>
             <p className="text-xl text-slate-600">Choose from our premium collection of vehicles</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {vehicleTypes.map((type, index) => (
               <Link 
                 key={index}
@@ -231,12 +231,12 @@ export function Home() {
       {/* Featured Vehicles - Premium Showcase */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12 text-center md:text-left gap-4">
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Featured Vehicles</h2>
-              <p className="text-xl text-slate-600">Handpicked premium vehicles near you</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-2 md:mb-4">Featured Vehicles</h2>
+              <p className="text-lg md:text-xl text-slate-600">Handpicked premium vehicles near you</p>
             </div>
-            <Link to="/search" className="hidden md:flex items-center text-primary hover:text-primary-dark font-semibold group">
+            <Link to="/search" className="inline-flex items-center text-primary hover:text-primary-dark font-semibold group bg-primary/10 px-4 py-2 rounded-full md:bg-transparent md:px-0 md:py-0 md:border-none">
               View All Collection
               <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -299,7 +299,7 @@ export function Home() {
       <section className="py-20 bg-slate-50 text-slate-900 relative border-y border-slate-200">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE0YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6bS04IDI4YzAtNi42MjcgNS4zNzMtMTIgMTItMTJzMTIgNS4zNzMgMTIgMTItNS4zNzMgMTItMTIgMTItMTItNS4zNzMtMTItMTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex w-16 h-16 bg-[#b88c56] rounded-2xl items-center justify-center mb-4 shadow-xl group-hover:scale-110 transition-transform duration-300">
