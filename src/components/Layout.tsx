@@ -1,7 +1,7 @@
 import { Outlet, Link, useLocation, useNavigate } from "react-router";
 import { Menu, User, LogOut, LayoutDashboard, Search, Car, UserCircle } from "lucide-react";
 import { useState, useEffect } from "react";
-const brandLogo = "/yatrivo-logo.png";
+const brandLogo = "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=400&h=400";
 
 export function Layout() {
   const location = useLocation();
@@ -48,8 +48,10 @@ export function Layout() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <Link to="/" className="flex items-center space-x-2 sm:space-x-3 group px-3 sm:px-4 py-1.5 bg-white/50 backdrop-blur-md rounded-full shadow-sm hover:shadow-md transition-all border border-slate-100">
-                <img src={brandLogo} alt="Yatrivo Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain rounded-full" />
-                <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-800 uppercase" style={{ letterSpacing: '0.05em' }}>Yatrivo<span className="font-light hidden sm:inline">Rentals</span></span>
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-[#f43f5e] via-[#eab308] to-[#0ea5e9] flex items-center justify-center text-white font-bold">
+                  <Car className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0"/>
+                </div>
+                <span className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-800 uppercase" style={{ letterSpacing: '0.05em' }}>Agent<span className="font-light hidden sm:inline">Rentals</span></span>
               </Link>
               
               {/* Desktop Navigation */}
@@ -293,9 +295,11 @@ export function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start space-x-3 mb-6">
-                <img src={brandLogo} alt="Yatrivo Logo" className="w-12 h-12 object-contain bg-white rounded-full p-1 shadow-lg" />
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                  <Car className="w-6 h-6 text-white" />
+                </div>
                 <div className="text-left">
-                  <span className="text-xl font-bold">Yatrivo Rentals</span>
+                  <span className="text-xl font-bold">Agent Rentals</span>
                   <p className="text-xs text-slate-400">Premium Marketplace</p>
                 </div>
               </div>
@@ -332,7 +336,7 @@ export function Layout() {
             </div>
           </div>
           <div className="border-t border-slate-700 mt-12 pt-8 text-center">
-            <p className="text-sm text-slate-400">© 2026 Yatrivo Rentals. All rights reserved. | Built for the modern sharing economy</p>
+            <p className="text-sm text-slate-400">© 2026 Agent Rentals. All rights reserved. | Built for the modern sharing economy</p>
           </div>
         </div>
       </footer>
