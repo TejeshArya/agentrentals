@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { Car, Mail, Lock, Eye, EyeOff, Shield, Zap } from "lucide-react";
-const brandLogo = "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=400&h=400";
+const brandLogo = "/yatrivo-logo.png";
 
 export function Login() {
   const navigate = useNavigate();
@@ -49,12 +49,12 @@ export function Login() {
           <Link to="/" className="inline-block mb-6">
             <img 
               src={brandLogo} 
-              alt="Agent Rentals Logo" 
+              alt="Yatrivo Rentals Logo" 
               className="h-24 w-auto mx-auto"
             />
           </Link>
           <h1 className="text-4xl font-bold text-white mb-2">Welcome Back</h1>
-          <p className="text-slate-300">Sign in to your Agent Rentals account</p>
+          <p className="text-slate-300">Sign in to your Yatrivo Rentals account</p>
         </div>
 
         {/* Login Card */}
